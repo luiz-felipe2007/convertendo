@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertendo moedas</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <label for="real">Real Brasileiro</label>
+        
+        <input type="number" name="" id="real">
+        <p>Em dólar:</p>
+        <button onclick="converterMoeda()">Converter</button>
+
+        <p id="resultado"></p>
+
+        <script>
+            function converterMoeda() {
+                const real = document.getElementById('real').value;
+                const dolar = (1.00 / 5.06 * real);
+                //const dolar = (real * 5.06)
+
+                document.getElementById('resultado').textContent = dolar.toFixed(2);
+            }
+        </script>
+        
+    </div>
+</body>
+
+</html>
